@@ -1,4 +1,4 @@
-from itertools import *
+from itertools import
 
 # product - функция, которая формирует все возможные комбинации символов длинной repeat
 alph ='poland'
