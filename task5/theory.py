@@ -71,4 +71,11 @@ sum_2 = sum(map(int, num_2))
 num_3 = 'AF5'
 sum_3 = sum(map(lambda x: int(x, 36), num_3))
 print(num_3)
+def convert (num, sys):
+    res = ''
+    while num !=0:
+        res += str(num % sys)
+        num //= sys
+    return res[::-1] if res else '0'
+print(convert(0,4))
 
