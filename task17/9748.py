@@ -1,6 +1,6 @@
 with open(r'.\files.py\17_9748') as file:
     data = [int(i) for i in file]
-max_15 =max(i for i in data if i % 100 == 15 and str(i)[-2:] == '15' )
+max_15 = max(i for i in data if i % 100 == 15)
 ans = []
 for num1, num2, num3 in zip(data, data[1:], data[2:]):
     u1= len(str(num1)) == 4

@@ -1,4 +1,4 @@
-with open(r'.\files.py\17_4622.txt') as file:
+with open(r'.\filess.py\17_4622.txt') as file:
     data= [int(i) for i in file]
 min_19 = min([i for i in data if i > 0 and i % 19 == 0])
 ans=[]
