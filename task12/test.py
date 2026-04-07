@@ -1,1 +1,1 @@
-print(f'{:b}')
+print(f'{112:b}')
