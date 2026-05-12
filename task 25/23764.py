@@ -1,15 +1,5 @@
-import fnmatch
+from fnmatch import fnmatch
 
-results = []
-limit = 10**10
-divisor = 1917
-
-for num in range(divisor, limit + 1, divisor):
-    num_str = str(num)
-    if fnmatch.fnmatch(num_str, '3?12?14*5'):
-        results.append((num, num // divisor))
-
-results.sort(key=lambda x: x[0])
-
-for num, quotient in results:
-    print(f"{num} {quotient}")
+for N in range(30120145 - 30120145 % 1917,10**10 +1, 1917):
+    if fnmatch(str(N), '3?12?14*5'):
+        print(N,N// 1917)
