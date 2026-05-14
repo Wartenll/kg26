@@ -1,14 +1,14 @@
 def f(num):
-    d = set()
-    for i in range(2, int(num ** .5) + 1):
+    cnt = 0
+    for i in range(1, int(num ** 0.5) + 1):
         if num % i == 0:
-            if i % 2 != 0: d |= {i}
-            if num // i % 2 != 0: d |= {num // i}
-    if len(d) == 3:
-        return d
-    return []
+            cnt += i
+            if i != num // i:
+                cnt += num // i
+    return cnt
 
-for N in range(18_782, 18_823):
-    if Z := f(N):
-        print(*sorted(Z))
 
+for num in range(1000, 10000):
+    s = f(num)
+    if s % 100 == 23:
+        print(num, s)
